@@ -79,8 +79,13 @@ export function AboutSection() {
                 height={600}
                 className="rounded-2xl shadow-2xl"
               />
-              <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-primary rounded-full flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-lg">TKC</span>
+              <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-primary rounded-full flex items-center justify-center shadow-lg p-2">
+                <Image
+                  src="/assets/logos/logoTransparente.webp"
+                  alt="TKC Team"
+                  width={500}
+                  height={500}
+                />
               </div>
             </div>
           </div>
