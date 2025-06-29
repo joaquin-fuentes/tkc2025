@@ -53,7 +53,7 @@ const services = [
       "Celebraciones únicas con actividades acuáticas seguras para niños.",
     icon: PartyPopper,
     image: "/assets/imagenes/grupo5.webp",
-    href: "/services/cumpleanos-infantiles",
+    href: "/services/cumples-infantiles",
   },
   {
     title: "Quincho para Eventos",

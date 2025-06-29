@@ -9,6 +9,7 @@ import { Clock, Users, Shield, CheckCircle } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaWhatsapp } from "react-icons/fa";
+import GaleriaSlider from "@/components/GaleriaSlider";
 
 const included = [
   "Kayak en excelente estado",
@@ -17,7 +18,13 @@ const included = [
   "Instrucciones básicas",
   "Mapa de rutas recomendadas",
 ];
-
+const images = [
+  "/assets/imagenes/alquilerkayak.webp",
+  "/assets/imagenes/grupo2.webp",
+  "/assets/imagenes/grupo3.webp",
+  "/assets/imagenes/remando.webp",
+  "/assets/imagenes/escuelita.webp",
+];
 export default function AlquilerKayaksPage() {
   return (
     <main className="min-h-screen">
@@ -40,7 +47,7 @@ export default function AlquilerKayaksPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
             {/* Card Izquierda: Kayak Doble */}
-            <Card className="hover:shadow-xl transition-all duration-300 w-[80%]">
+            <Card className="hover:shadow-xl transition-all duration-300 w-full sm:w-[80%] mx-auto">
               <CardHeader className="p-0">
                 <div className="relative">
                   <Image
@@ -152,7 +159,8 @@ export default function AlquilerKayaksPage() {
           </div>
         </div>
       </section>
-
+      {/* carousel */}
+      <GaleriaSlider images={images}></GaleriaSlider>
       {/* CTA */}
       <section className="py-20 bg-muted/50">
         <div className="container mx-auto px-4 text-center">
