@@ -9,8 +9,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 const benefits = [
-  "Mejora relaciones y cohesi\u00f3n grupal",
-  "Fomenta la comunicaci\u00f3n y confianza",
+  "Mejora relaciones y cohesión grupal",
+  "Fomenta la comunicación y confianza",
   "Desarrolla liderazgo y promueve la creatividad",
   "Aumenta la productividad frente al trabajo individualista",
 ];
@@ -77,7 +77,7 @@ export default function TeamBuildingPage() {
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">Team Building</h1>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto">
-            Actividades de integraci\u00f3n para fortalecer equipos de trabajo
+            Actividades de integración para fortalecer equipos de trabajo
           </p>
         </div>
       </section>
