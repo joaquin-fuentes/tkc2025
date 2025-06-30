@@ -43,7 +43,7 @@ export function HeroSection() {
           <Button
             size="lg"
             className="bg-primary hover:bg-primary/90 text-white px-8 py-3 text-lg"
-            onClick={() => scrollToSection("services")}
+            onClick={() => scrollToSection("servicios")}
           >
             Explorar Servicios
           </Button>

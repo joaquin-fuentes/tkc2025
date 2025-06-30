@@ -1,8 +1,7 @@
 "use client";
 
-import type React from "react";
-
-import { useState } from "react";
+import React from "react";
+import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -16,30 +15,34 @@ import {
   MapPin,
 } from "lucide-react";
 import Link from "next/link";
+import { FaWhatsapp } from "react-icons/fa";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+
+type FormData = {
+  name: string;
+  email: string;
+  message: string;
+};
 
 export function ContactSection() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isValid },
+  } = useForm<FormData>({
+    mode: "onChange",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Aquí iría la lógica para enviar el formulario
-    console.log("Form submitted:", formData);
-    // Reset form
-    setFormData({ name: "", email: "", message: "" });
+  const onSubmit = (data: FormData) => {
+    console.log("Form submitted:", data);
+    reset();
     alert("¡Mensaje enviado! Te contactaremos pronto.");
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
   };
 
   return (
@@ -58,16 +61,18 @@ export function ContactSection() {
           {/* Contact Info */}
           <div className="animate-slide-in-left">
             <div className="space-y-4 md:space-y-8 mb-8">
+              {/* Teléfono */}
               <Card>
                 <CardContent className="flex items-center space-x-4 p-6">
                   <Phone className="w-6 h-6 text-primary" />
                   <div>
                     <h3 className="font-semibold">Teléfono</h3>
-                    <p className="text-muted-foreground">+54 381 123-4567</p>
+                    <p className="text-muted-foreground">+54 381 609-7754</p>
                   </div>
                 </CardContent>
               </Card>
 
+              {/* Email */}
               <Card>
                 <CardContent className="flex items-center space-x-4 p-6">
                   <Mail className="w-6 h-6 text-primary" />
@@ -80,6 +85,7 @@ export function ContactSection() {
                 </CardContent>
               </Card>
 
+              {/* Dirección */}
               <Card>
                 <CardContent className="flex items-center space-x-4 p-6">
                   <MapPin className="w-6 h-6 text-primary" />
@@ -103,73 +109,118 @@ export function ContactSection() {
                 <CardTitle>Envíanos un Mensaje</CardTitle>
               </CardHeader>
               <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                   <div>
                     <Input
                       type="text"
-                      name="name"
                       placeholder="Tu nombre"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      className="w-full"
+                      {...register("name", {
+                        required: "El nombre es obligatorio",
+                        minLength: {
+                          value: 2,
+                          message: "Debe tener al menos 2 caracteres",
+                        },
+                      })}
                     />
+                    {errors.name && (
+                      <p className="text-red-500 text-sm mt-1">
+                        {errors.name.message}
+                      </p>
+                    )}
                   </div>
                   <div>
                     <Input
                       type="email"
-                      name="email"
                       placeholder="Tu email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="w-full"
+                      {...register("email", {
+                        required: "El email es obligatorio",
+                        pattern: {
+                          value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                          message: "Formato de email inválido",
+                        },
+                      })}
                     />
+                    {errors.email && (
+                      <p className="text-red-500 text-sm mt-1">
+                        {errors.email.message}
+                      </p>
+                    )}
                   </div>
                   <div>
                     <Textarea
-                      name="message"
                       placeholder="Tu mensaje"
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
                       rows={5}
-                      className="w-full"
+                      {...register("message", {
+                        required: "El mensaje es obligatorio",
+                        minLength: {
+                          value: 10,
+                          message:
+                            "El mensaje debe tener al menos 10 caracteres",
+                        },
+                      })}
                     />
+                    {errors.message && (
+                      <p className="text-red-500 text-sm mt-1">
+                        {errors.message.message}
+                      </p>
+                    )}
                   </div>
-                  <Button
-                    type="submit"
-                    className="w-full bg-primary hover:bg-primary/90"
-                    size="lg"
-                  >
-                    Enviar Mensaje
-                  </Button>
+
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <span className="block w-full">
+                          <Button
+                            type="button"
+                            className="w-full bg-primary/70 cursor-not-allowed"
+                            size="lg"
+                            disabled
+                          >
+                            Enviar Mensaje
+                          </Button>
+                        </span>
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>
+                          Este formulario está en construcción. Pronto estará
+                          funcional.
+                        </p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
                 </form>
               </CardContent>
             </Card>
           </div>
         </div>
+
         {/* Social Links */}
         <div className="mt-12 md:mt-4 flex flex-col items-center justify-center">
           <h3 className="text-xl font-semibold mb-4">Síguenos en Redes</h3>
           <div className="flex space-x-4">
             <Link
-              href="https://facebook.com"
+              href="https://www.facebook.com/tkcturismoaventura/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-primary text-white p-3 rounded-full hover:bg-primary/90 transition-colors"
             >
               <Facebook className="w-6 h-6" />
             </Link>
             <Link
-              href="https://instagram.com"
+              href="https://www.instagram.com/tucumankayakclub/?hl=es"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-primary text-white p-3 rounded-full hover:bg-primary/90 transition-colors"
             >
               <Instagram className="w-6 h-6" />
             </Link>
             <Link
-              href="https://youtube.com"
+              href="https://wa.me/543816097754?text=Hola!%20Me%20comunico%20desde%20la%20web%20de%20TKC%20y%20quiero%20consultar%20sobre%20las%20actividades%20de%20Tucumán%20Kayak%20Club."
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-primary text-white p-3 rounded-full hover:bg-primary/90 transition-colors"
             >
-              <Youtube className="w-6 h-6" />
+              <FaWhatsapp className="w-6 h-6" />
             </Link>
           </div>
         </div>

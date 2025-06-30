@@ -8,6 +8,7 @@ import {
   Phone,
   MapPin,
 } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 export function Footer() {
   return (
@@ -31,22 +32,28 @@ export function Footer() {
             </p>
             <div className="flex space-x-4">
               <Link
-                href="https://facebook.com"
+                href="https://www.facebook.com/tkcturismoaventura/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-primary transition-colors"
               >
                 <Facebook className="w-6 h-6" />
               </Link>
               <Link
-                href="https://instagram.com"
+                href="https://www.instagram.com/tucumankayakclub/?hl=es"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-primary transition-colors"
               >
                 <Instagram className="w-6 h-6" />
               </Link>
               <Link
-                href="https://youtube.com"
+                href="https://wa.me/543816097754?text=Hola!%20Me%20comunico%20desde%20la%20web%20de%20TKC%20y%20quiero%20consultar%20sobre%20las%20actividades%20de%20Tucumán%20Kayak%20Club."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-primary transition-colors"
               >
-                <Youtube className="w-6 h-6" />
+                <FaWhatsapp className="w-6 h-6" />
               </Link>
             </div>
           </div>
@@ -73,7 +80,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/services"
+                  href="/#servicios"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Servicios
@@ -95,6 +102,14 @@ export function Footer() {
                   Contacto
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/terminos"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Términos y Condiciones
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -104,7 +119,7 @@ export function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-primary" />
-                <span className="text-gray-400">+54 381 123-4567</span>
+                <span className="text-gray-400">+54 381 609-7754</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-primary" />

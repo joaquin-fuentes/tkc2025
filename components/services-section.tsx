@@ -15,14 +15,14 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 
-const services = [
+const servicios = [
   {
     title: "Alquiler de Kayaks",
     description:
       "Kayaks de alta calidad para todas las edades y niveles de experiencia.",
     icon: Waves,
     image: "/assets/imagenes/grupo2.webp",
-    href: "/services/alquiler-kayaks",
+    href: "/servicios/alquiler-kayaks",
   },
   {
     title: "Excursiones",
@@ -30,14 +30,14 @@ const services = [
       "Aventuras guiadas en río, dique, rappel, trekking y canyoning.",
     icon: Mountain,
     image: "/assets/imagenes/alquilerkayak.webp",
-    href: "/services/excursiones",
+    href: "/servicios/excursiones",
   },
   {
     title: "Team Building",
     description: "Actividades corporativas para fortalecer equipos de trabajo.",
     icon: Users,
     image: "/assets/imagenes/coaching.webp",
-    href: "/services/team-building",
+    href: "/servicios/team-building",
   },
   {
     title: "Escuela de Kayaks",
@@ -45,7 +45,7 @@ const services = [
       "Aprende las técnicas básicas y avanzadas del kayak con instructores certificados.",
     icon: GraduationCap,
     image: "/assets/imagenes/remando.webp",
-    href: "/services/escuela-kayaks",
+    href: "/servicios/escuela-kayaks",
   },
   {
     title: "Cumpleaños Infantiles",
@@ -53,34 +53,34 @@ const services = [
       "Celebraciones únicas con actividades acuáticas seguras para niños.",
     icon: PartyPopper,
     image: "/assets/imagenes/grupo5.webp",
-    href: "/services/cumples-infantiles",
+    href: "/servicios/cumples-infantiles",
   },
   {
     title: "Quincho para Eventos",
     description: "Espacio ideal para eventos privados con vista al dique.",
     icon: Home,
     image: "/assets/imagenes/quincho6.webp",
-    href: "/services/quincho-eventos",
+    href: "/servicios/quincho-eventos",
   },
   {
     title: "Guardería de Kayaks",
     description: "Servicio de almacenamiento seguro para tu kayak personal.",
     icon: Shield,
     image: "/assets/imagenes/guarderia.webp",
-    href: "/services/guarderia-kayaks",
+    href: "/servicios/guarderia-kayaks",
   },
   {
     title: "Estudiantiles",
     description: "Programas especiales y descuentos para grupos estudiantiles.",
     icon: BookOpen,
     image: "/assets/imagenes/portada3.webp",
-    href: "/services/estudiantiles",
+    href: "/servicios/estudiantiles",
   },
 ];
 
 export function ServicesSection() {
   return (
-    <section id="services" className="py-20">
+    <section id="servicios" className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -92,7 +92,7 @@ export function ServicesSection() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {services.map((service, index) => (
+          {servicios.map((service, index) => (
             <Card
               key={service.title}
               className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-bounce-in"

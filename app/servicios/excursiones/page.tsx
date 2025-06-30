@@ -224,7 +224,7 @@ export default function ExcursionesPage() {
                 <span>Consultar por WhatsApp</span>
               </Button>
             </Link>
-            <Link href="/#services">
+            <Link href="/#servicios">
               <Button
                 size="lg"
                 variant="outline"

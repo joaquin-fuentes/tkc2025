@@ -62,7 +62,7 @@ export function AboutSection() {
               </Card>
             </div>
 
-            <Link href="/about">
+            <Link href="/sobre-nosotros">
               <Button size="lg" className="bg-primary hover:bg-primary/90">
                 Conocer Más
               </Button>

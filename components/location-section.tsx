@@ -58,7 +58,7 @@ export function LocationSection() {
                 <div>
                   <h3 className="font-semibold mb-2">Contacto</h3>
                   <p className="text-muted-foreground">
-                    +54 381 123-4567
+                    +54 381 609-7754
                     <br />
                     info@tucumankayakclub.com
                   </p>

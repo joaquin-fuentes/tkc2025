@@ -183,7 +183,7 @@ export default function AlquilerKayaksPage() {
                 Reservar Ahora
               </Button>
             </Link>
-            <Link href="/services/excursiones">
+            <Link href="/servicios/excursiones">
               <Button size="lg" variant="outline">
                 Ver Excursiones Guiadas
               </Button>
