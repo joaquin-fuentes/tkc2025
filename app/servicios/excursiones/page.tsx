@@ -210,7 +210,7 @@ export default function ExcursionesPage() {
             Nuestros expertos te ayudarán a elegir la excursión perfecta según
             tu nivel y preferencias
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col items-center sm:flex-row gap-4 justify-center">
             <Link
               href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hola%2C%20me%20comunico%20desde%20la%20web%20de%20TKC%20y%20me%20gustar%C3%ADa%20consultar%20sobre%20las%20excursiones`}
               target="_blank"

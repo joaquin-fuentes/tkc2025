@@ -42,7 +42,7 @@ const servicios = [
   {
     title: "Escuela de Kayaks",
     description:
-      "Aprende las técnicas básicas y avanzadas del kayak con instructores certificados.",
+      "Aprende técnicas básicas y avanzadas del kayak con instructores certificados.",
     icon: GraduationCap,
     image: "/assets/imagenes/remando.webp",
     href: "/servicios/escuela-kayaks",
@@ -120,7 +120,7 @@ export function ServicesSection() {
                 <Link href={service.href}>
                   <Button
                     variant="outline"
-                    className="w-full bg-primary text-white md:bg-transparent md:text-foreground md:group-hover:bg-primary md:group-hover:text-whitetransition-colors"
+                    className="w-full bg-primary text-white md:bg-transparent md:text-foreground md:group-hover:bg-primary md:group-hover:text-white transition-colors"
                   >
                     Ver Detalles
                   </Button>
