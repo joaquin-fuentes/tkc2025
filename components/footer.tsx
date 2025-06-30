@@ -9,6 +9,7 @@ import {
   MapPin,
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
+import { WHATSAPP_NUMBER } from "@/constants";
 
 export function Footer() {
   return (
@@ -48,7 +49,9 @@ export function Footer() {
                 <Instagram className="w-6 h-6" />
               </Link>
               <Link
-                href="https://wa.me/543816097754?text=Hola!%20Me%20comunico%20desde%20la%20web%20de%20TKC%20y%20quiero%20consultar%20sobre%20las%20actividades%20de%20Tucumán%20Kayak%20Club."
+                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+                  "Hola! Me comunico desde la web de TKC y quiero consultar sobre las actividades de Tucumán Kayak Club."
+                )}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-primary transition-colors"

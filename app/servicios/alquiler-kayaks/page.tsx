@@ -10,6 +10,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaWhatsapp } from "react-icons/fa";
 import GaleriaSlider from "@/components/GaleriaSlider";
+import { WHATSAPP_NUMBER } from "@/constants";
 
 const included = [
   "Kayak en excelente estado",
@@ -81,7 +82,9 @@ export default function AlquilerKayaksPage() {
                 </div>
 
                 <Link
-                  href="https://wa.me/543816097754?text=Hola%2C%20me%20comunico%20desde%20la%20web%20de%20TKC%20y%20quiero%20consultar%20sobre%20el%20alquiler%20de%20kayak"
+                  href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+                    "Hola, me comunico desde la web de TKC y quiero consultar sobre el alquiler de kayak."
+                  )}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -173,7 +176,9 @@ export default function AlquilerKayaksPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="https://wa.me/543816097754?text=Hola%2C%20me%20comunico%20desde%20la%20web%20de%20TKC%20y%20quiero%20consultar%20sobre%20el%20alquiler%20de%20kayak"
+              href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+                "Hola, me comunico desde la web de TKC y quiero consultar sobre el alquiler de kayak."
+              )}`}
               target="_blank"
               rel="noopener noreferrer"
             >

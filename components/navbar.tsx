@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { usePathname, useRouter } from "next/navigation";
+import { WHATSAPP_NUMBER } from "@/constants";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -63,7 +64,9 @@ export function Navbar() {
     },
     {
       platform: "whatsapp",
-      href: `https://wa.me/543816097754?text=Hola!%20Me%20comunico%20desde%20la%20web%20de%20TKC%20y%20quiero%20consultar%20sobre%20las%20actividades%20de%20Tucumán%20Kayak%20Club.`,
+      href: `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+        "Hola! Me comunico desde la web de TKC y quiero consultar sobre las actividades de Tucumán Kayak Club."
+      )}`,
       Icon: FaWhatsapp,
     },
   ];
