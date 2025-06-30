@@ -1,6 +1,7 @@
 "use client";
 
 import { Card, CardContent } from "@/components/ui/card";
+import { EMAIL, WHATSAPP_NUMBER_VIEW } from "@/constants";
 import { MapPin, Clock, Phone } from "lucide-react";
 import Image from "next/image";
 
@@ -58,9 +59,9 @@ export function LocationSection() {
                 <div>
                   <h3 className="font-semibold mb-2">Contacto</h3>
                   <p className="text-muted-foreground">
-                    +54 381 609-7754
+                    {WHATSAPP_NUMBER_VIEW}
                     <br />
-                    info@tucumankayakclub.com
+                    {EMAIL}
                   </p>
                 </div>
               </CardContent>

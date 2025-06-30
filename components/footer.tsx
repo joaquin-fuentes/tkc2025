@@ -9,7 +9,7 @@ import {
   MapPin,
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
-import { WHATSAPP_NUMBER } from "@/constants";
+import { EMAIL, WHATSAPP_NUMBER, WHATSAPP_NUMBER_VIEW } from "@/constants";
 
 export function Footer() {
   return (
@@ -122,11 +122,11 @@ export function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-primary" />
-                <span className="text-gray-400">+54 381 609-7754</span>
+                <span className="text-gray-400">{WHATSAPP_NUMBER_VIEW}</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-primary" />
-                <span className="text-gray-400">info@tucumankayakclub.com</span>
+                <span className="text-gray-400">{EMAIL}</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4 text-primary" />

@@ -22,7 +22,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { WHATSAPP_NUMBER } from "@/constants";
+import { EMAIL, WHATSAPP_NUMBER, WHATSAPP_NUMBER_VIEW } from "@/constants";
 
 type FormData = {
   name: string;
@@ -68,7 +68,7 @@ export function ContactSection() {
                   <Phone className="w-6 h-6 text-primary" />
                   <div>
                     <h3 className="font-semibold">Teléfono</h3>
-                    <p className="text-muted-foreground">+54 381 609-7754</p>
+                    <p className="text-muted-foreground">{WHATSAPP_NUMBER_VIEW}</p>
                   </div>
                 </CardContent>
               </Card>
@@ -79,9 +79,7 @@ export function ContactSection() {
                   <Mail className="w-6 h-6 text-primary" />
                   <div>
                     <h3 className="font-semibold">Email</h3>
-                    <p className="text-muted-foreground">
-                      info@tucumankayakclub.com
-                    </p>
+                    <p className="text-muted-foreground">{EMAIL}</p>
                   </div>
                 </CardContent>
               </Card>
