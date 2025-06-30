@@ -72,7 +72,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/about"
+                  href="/sobre-nosotros"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Sobre Nosotros

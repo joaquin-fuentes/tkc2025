@@ -120,7 +120,7 @@ export function ServicesSection() {
                 <Link href={service.href}>
                   <Button
                     variant="outline"
-                    className="w-full group-hover:bg-primary group-hover:text-white transition-colors"
+                    className="w-full bg-primary text-white md:bg-transparent md:text-foreground md:group-hover:bg-primary md:group-hover:text-whitetransition-colors"
                   >
                     Ver Detalles
                   </Button>
