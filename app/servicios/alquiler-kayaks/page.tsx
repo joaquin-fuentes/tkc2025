@@ -131,7 +131,7 @@ export default function AlquilerKayaksPage() {
                 </CardHeader>
                 <CardContent className="p-0">
                   <ul className="space-y-2 text-muted-foreground">
-                    <li>• Lunes a Domingo: 9:00 - 18:00</li>
+                    <li>• Lunes a Domingo: 10:00 - 18:00</li>
                     <li>• Alquiler mínimo: 30 minutos</li>
                     <li>
                       • Estamos en la carpa de TKC en el secto de playa del

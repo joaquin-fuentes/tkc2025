@@ -45,7 +45,7 @@ export function LocationSection() {
                 <div>
                   <h3 className="font-semibold mb-2">Horarios</h3>
                   <p className="text-muted-foreground">
-                    Lunes a Domingo: 9:00 - 18:00
+                    Lunes a Domingo: 10:00 - 18:00
                     <br />
                     Reservas: 24/7 online
                   </p>
