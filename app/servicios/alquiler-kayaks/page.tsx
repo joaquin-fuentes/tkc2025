@@ -59,7 +59,7 @@ export default function AlquilerKayaksPage() {
                     className="w-full h-48 object-cover rounded-t-lg"
                   />
                   <Badge className="absolute top-4 right-4 bg-primary">
-                    Desde $9.000
+                    Desde $10.000
                   </Badge>
                 </div>
               </CardHeader>
